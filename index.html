@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <style>
+        .psv-navbar {
+            display: none;
+        }
+    </style>
+</head>
+<body style = "background: #ddd9d9;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container col-md-12">
+            <a class="navbar-brand text-center" href="index.html">
+                <h1 class="mb-0 title" data-aos="zoom-in">RimwOrld</h1>
+                <h6 class="mb-1 title2 d-flex justify-content-center" data-aos="zoom-in">Tricks and Tips</h6>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-toggler-state="O">
+                <span class="navbar-toggler-icon">
+            </button>
+            <div class="collapse navbar-collapse" data-aos="zoom-in" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link like-button" onclick="incrementLikes()">Like</a>
+                        <span id="like-count" class="like-count">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/autorotate-plugin/index.min.js"></script>
+
+
+    <div style="position: relative;">
+        <div class="view" id="viewer"></div>
+        <div class="hero-lines container">
+            <div class="col-md-3 unselectable d-flex flex-column align-items-center">
+                <p class="hero-text">As a bilingual, I've always been intrigued by the diverse approaches that different communities take towards intricate strategy games such as RimWorld. So I wonder, why not make a funny guide and share with people what made me laugh and learn?</p>
+                <a href="disclaimer.html">
+                    <button class="read-disclaimer-btn">Read Disclaimer</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="title2-container">
+        <h2 class="scroll-title">Let's begin,</h2>
+    </div>
+
+    <a href="singularity.html" class="clickable-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 image-card">
+              <div class="card">
+                <img src="images/toes1.png" class="scroll-animation img-fluid" alt="Image description">
+              </div>
+            </div>
+            <div class="col-md-6 align-self-center scroll-animation">
+              <p class="title3">Singularity point</p>
+              <p class="caption">Explaining the intricacies behind the Chinese KillBox</p>
+            </div>
+          </div>
+        </div>
+    </a>
+
+     <a href="index.html" class="clickable-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 align-self-center scroll-animation order-2 order-md-1">
+                    <p class="title3">Circle open Base</p>
+                    <p class="caption">Learn about this high risk high reward playstyle - early game resource gathering, research tree, and survival tips</p>
+                </div>
+                <div class="col-md-6 image-card order-1 order-md-2">
+                    <div class="card">
+                        <img src="images/circle-base.jpg" class="scroll-animation img-fluid" alt="Image description">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <div class="thumbnails-container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6 col-sm-12 thumbnail-spacing">
+            <div class="thumbnail">
+                <a href="cheese.html">
+                    <img src="images/scaven.png" alt="Image 1" class="scroll-animation card img-fluid">
+                    <p class="thumb-caption scroll-animation">Cheeses</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12 thumbnail-spacing">
+            <div class="thumbnail">
+                <a href="strategies.html">
+                    <img src="images/tynan.png" alt="Image 2" class="scroll-animation card img-fluid">
+                    <p class="thumb-caption scroll-animation">Strategies</p>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewer = new PhotoSphereViewer.Viewer({
+              container: 'viewer',
+              panorama: "https://raw.githubusercontent.com/BREADLuVER/rimguide/ea93ecff473cec05d06af7f8f6f641b4bcb3d807/gr2.jpg",
+              plugins: [
+                [PhotoSphereViewer.AutorotatePlugin, {
+                  autostartDelay: 1000, // Set the autorotation start delay in milliseconds
+                  speed: '1rpm', // Set the autorotation speed, e.g., '1rpm' for 1 rotation per minute
+                  pitch: '5deg' // Set the autorotation pitch, e.g., '5deg' for a 5-degree pitch
+                }]
+              ]
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggler = document.querySelector('.navbar-toggler');
+
+            toggler.addEventListener('click', function() {
+              var togglerState = this.getAttribute('data-toggler-state');
+              
+              if (togglerState === 'O') {
+                this.setAttribute('data-toggler-state', 'X');
+              } else {
+                this.setAttribute('data-toggler-state', 'O');
+              }
+            });
+        });
+
+        document.addEventListener("scroll", function () {
+            const title = document.querySelector(".scroll-title");
+            const titleTop = title.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (titleTop <= windowHeight * 1) {
+                title.style.opacity = "1";
+                title.style.transform = "translateY(0)";
+            } else {
+                title.style.opacity = "0";
+                title.style.transform = "translateY(50px)";
+            }
+        });
+
+        document.addEventListener("scroll", function () {
+            const elements = document.querySelectorAll(".scroll-animation");
+            const windowHeight = window.innerHeight;
+
+            elements.forEach((el) => {
+              const elTop = el.getBoundingClientRect().top;
+
+              if (elTop <= windowHeight * 1) {
+                el.style.opacity = "1";
+                el.style.transform = "translateY(0)";
+              } else {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(50px)";
+              }
+            });
+          });
+
+        let likeCount = 0;
+        const likeCountElement = document.getElementById('like-count');
+
+        function incrementLikes() {
+          likeCount++;
+          likeCountElement.textContent = likeCount;
+        }
+
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

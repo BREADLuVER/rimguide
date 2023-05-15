@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/disclaimer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        .psv-navbar {
+            display: none;
+        }
+    </style>
+</head>
+<body style = "background: #ddd9d9;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container col-md-12">
+            <a class="navbar-brand text-center" href="#">
+                <h1 class="mb-0 title">RimwOrld</h1>
+                <h6 class="mb-1 title2 d-flex justify-content-center">Tricks and Tips</h6>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-toggler-state="O">
+                <span class="navbar-toggler-icon">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disclaimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link like-button" onclick="incrementLikes()">Like</a>
+                        <span id="like-count" class="like-count">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+
+
+
+    <div class="dis-container">
+        <div class="row">
+            <div class="disclaim col-lg-6 col-md-6 col-sm-12 align-self-center" data-aos="zoom-in">
+                <p class="title3">An Important note</p>
+                <p class="caption">Welcome to my unique guide on RimWorld! This guide aims to document the different ways how the Chinese RimWorld community approaches the game, from new kill boxes to overall game strategies and then to some handy, hilarious cheeses. </p> 
+                <p class="caption">I must mention that a lot of the information I'll be interpreting and providing in this guide is documented on the Chinese discussion site TieBa and in video form on bilibili. However, these sources are like folk tales, passed from one player to another and refined over time. As such, while I'll do my absolute best to cite and communicate with the creators of the strategies I present, it's possible that I may make mistakes or unintentionally leave out important details. Correct me if you have the insight. 
+                </p> 
+                <p class="caption">
+                I should also note that I should be viewed as a passionate reporter, rather than an expert or authority on the game. My goal is not to tell you “the best way” to play a video game or dive into the politics of which community plays the game better. Instead, I aim to provide a platform for sharing and discussing the unique strategies, insights, and experiences of RimWorld players from around the world.
+                </p>
+            </div>
+            <div class="dis-pic-container col-lg-6 col-md-6 col-sm-12" data-aos="zoom-in">
+                <div class="card">
+                    <img src="images/royaltycover.jpg" class="img-fluid" alt="Image description">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var toggler = document.querySelector('.navbar-toggler');
+
+        toggler.addEventListener('click', function() {
+          var togglerState = this.getAttribute('data-toggler-state');
+
+          if (togglerState === 'O') {
+            this.setAttribute('data-toggler-state', 'X');
+          } else {
+            this.setAttribute('data-toggler-state', 'O');
+          }
+        });
+      });
+
+      document.addEventListener("scroll", function () {
+        const elements = document.querySelectorAll(".scroll-animation");
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((el) => {
+          const elTop = el.getBoundingClientRect().top;
+
+          if (elTop <= windowHeight * 1) {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          } else {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(50px)";
+          }
+        });
+      });
+
+      let likeCount = 0;
+      const likeCountElement = document.getElementById('like-count');
+
+      function incrementLikes() {
+        likeCount++;
+        likeCountElement.textContent = likeCount;
+      }
+
+      AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
