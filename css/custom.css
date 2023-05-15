@@ -1,0 +1,409 @@
+@font-face {
+  font-family: logoType;
+  src: url("../fonts/RimWordFont.ttf");
+}
+
+.col-md-12,
+.col-md-10,
+.col-md-4,
+.col-md-3,
+.col-md-6{
+	border : solid 0px black;
+}
+
+.navbar{ 
+  padding: 0rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10;
+}
+
+.nav-link{
+	font-family: logoType;
+	color : black;
+	margin: 9px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #A0963E;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.navbar-toggler {
+  font-family: logoType;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 0.80;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: black;
+}
+
+.navbar-toggler:hover{
+	color: grey;
+}
+
+.navbar-toggler[data-toggler-state="O"]::before {
+  content: "O";
+}
+
+.navbar-toggler[data-toggler-state="X"]::before {
+  content: "X";
+}
+
+.navbar-toggler:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+
+.noPadding{
+	padding : 0px;
+}
+
+@keyframes scaleTitle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.title{
+	font-family: logoType;
+	font-size : 33pt;
+	color : #3A3939;
+	margin-left: 0px;
+  transform-origin: center bottom;
+  animation: scaleTitle 2s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title2 {
+  font-family: logoType;
+  font-size : 2pt;
+  color : #3A3939;
+  transform-origin: center bottom;
+  animation: scaleTitle 2s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.view{
+	 height: 80vh;
+}
+
+.navbar-brand h6{
+	font-style: italic;
+	font-size : 10pt;
+}
+
+.like-count{
+  font-family: logoType;
+}
+
+.hero-lines {
+  position: absolute;
+  top: 36%;
+  left: 8%;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  text-align: center;
+  font-size: 10pt;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.hero-text::first-letter {
+  font-size: 17pt;
+  font-weight: bold;
+}
+
+.read-disclaimer-btn{
+  background: none; 
+  border: none; 
+  color: white; 
+  text-decoration: underline;
+  pointer; font-size: 11px
+}
+
+.read-disclaimer-btn:hover {
+        color: grey;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.title2-container {
+    text-align: center;
+    margin-top: 50px; /* Adjust this value as needed */
+}
+
+.scroll-title {
+    font-family: logoType;
+    font-size : 30pt;
+    color : black;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.title3{
+  font-family: logoType;
+  font-size : 17pt;
+  text-align: center;
+  color : black;
+}
+
+.title3:hover{
+  color:#A0963E;
+}
+
+.clickable-container {
+  display: block;
+  text-decoration: none;
+  margin-top: 60px;
+}
+
+.clickable-container:hover {
+  cursor: pointer;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 0px;
+  color : black;
+}
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.card {
+  border-radius: 50px;
+  overflow: hidden;
+  display: inline-block;
+  background: #ddd9d9;
+  border: none;
+  justify-content: center;
+}
+
+.thumbnails-container {
+  justify-content: center;
+  margin-top: 100px; /* Adjust this value as needed */
+}
+
+.thumbnail {
+  width: auto;
+  text-align: center;
+}
+
+.thumbnail img {
+  width: 30%;
+  max-width: 200px;
+}
+
+.thumbnail a{
+  color: black;
+  text-decoration: none;
+}
+
+
+ ////////////////
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container{
+	padding : 0px;
+	border: 5;
+}
+
+.space{
+	padding : 10px;
+}
+
+.img-thumbnail {
+  border: 0;
+  padding: 0;
+}
+
+.contact{
+	border: solid 5px grey;
+}
+
+.btn-primary{
+	color:grey;
+}
+
+.thumb-caption{
+  font-family: logoType;
+  font-size: 12pt;
+}
+
+@media (max-width: 1100px) {
+  .view{
+    height: 50vh;
+  }
+
+  .hero-text {
+    display:none;
+  }
+
+  .hero-text::first-letter {
+    display:none;
+  }
+
+  .read-disclaimer-btn{
+    display: none;
+  }
+
+  .title{
+    font-family: logoType;
+    font-size : 33pt;
+    color : black;
+    margin: 15px;
+  }
+
+  .nav-link{
+    font-family: logoType;
+    color : black;
+    margin: 15px;
+  }
+
+  .caption{
+    margin-top: -20px;
+  }
+
+   .like-count{
+    font-family: logoType;
+    margin: 15px;
+  }
+  .thumbnail {
+    width: auto;
+    text-align: center;
+  }
+
+  .thumbnail img {
+    width: 40%;
+    max-width: 300px;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .title{
+    font-family: logoType;
+    font-size : 20pt;
+    color : black;
+    margin: 10px;
+  }
+
+  .navbar-toggler {
+    font-family: logoType;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0.80;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+  }
+
+  .nav-item{
+    font-family: logoType;
+    color : black;
+    margin-left: 15px;
+    font-size: 10px;
+    padding = 0;
+  }
+
+  .like-count{
+    font-family: logoType;
+  }
+
+  .image-card {
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 22vh;
+    width: 60vh;
+    background: #ddd9d9;
+    margin-bottom: -5px;
+  }
+
+  .clickable-container {
+    display: block;
+    text-decoration: none;
+    margin-top: 40px;
+  }
+
+  .title3{
+    font-family: logoType;
+    font-size : 17pt;
+    text-align: center;
+    color : black;
+    margin-bottom: -0px;
+  }
+
+  .caption {
+    font-size : 10pt;
+    text-align: center;
+    margin-top: 0px;
+    color : black;
+  }
+
+  .thumbnails-container {
+    justify-content: center;
+    margin-top: 35px; /* Adjust this value as needed */
+  }
+
+  .thumbnail {
+    width: auto;
+    text-align: center;
+  }
+
+  .thumbnail img {
+    width: 30%;
+    max-width: 300px;
+  }
+
+  .thumb-caption{
+    font-family: logoType;
+    font-size: 8pt;
+  }
+}

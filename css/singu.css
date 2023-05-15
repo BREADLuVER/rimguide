@@ -1,0 +1,302 @@
+@font-face {
+  font-family: logoType;
+  src: url("../fonts/RimWordFont.ttf");
+}
+
+@font-face {
+   font-family: iran;
+  src: url('https://fonts.googleapis.com/css?family=Inria Sans');
+}
+
+.col-md-12,
+.col-md-10,
+.col-md-4,
+.col-md-3,
+.col-md-6{
+      border : solid 0px black;
+}
+
+.navbar{ 
+  padding: 0rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10;
+}
+
+.nav-link{
+  font-family: logoType;
+  color : black;
+  margin: 9px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #A0963E;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.navbar-toggler {
+  font-family: logoType;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 0.80;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: black;
+}
+
+.navbar-toggler:hover{
+  color: grey;
+}
+
+.navbar-toggler[data-toggler-state="O"]::before {
+  content: "O";
+}
+
+.navbar-toggler[data-toggler-state="X"]::before {
+  content: "X";
+}
+
+.navbar-toggler:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+
+.noPadding{
+  padding : 0px;
+}
+
+@keyframes scaleTitle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.title{
+  font-family: logoType;
+  font-size : 33pt;
+  color : #3A3939;
+  margin-left: 0px;
+  transform-origin: center bottom;
+  animation: scaleTitle 2s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title2 {
+  font-family: logoType;
+  font-size : 2pt;
+  color : #3A3939;
+  transform-origin: center bottom;
+  animation: scaleTitle 2s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.view{
+  height: 80vh;
+}
+
+.navbar-brand h6{
+  font-style: italic;
+  font-size : 10pt;
+}
+
+.like-count{
+  font-family: logoType;
+}
+
+.image-container{
+  overflow: hidden;
+}
+
+.hero-img{
+  width: 70%;
+}
+
+body {
+        text-align: center;
+      }
+      
+p {
+  margin: 0 auto;
+  font-family: iran;
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+.img-fluid {
+  max-width: 70%;
+}
+
+.caption {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container{
+      padding : 0px;
+}
+
+.space{
+      padding : 10px;
+}
+
+.card{
+  width: 40%
+}
+
+.hero-container{
+  width: auto;
+  text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+  .view{
+    height: 50vh;
+  }
+
+  .read-disclaimer-btn{
+    display: none;
+  }
+
+  .title{
+    font-family: logoType;
+    font-size : 33pt;
+    color : black;
+    margin: 15px;
+  }
+
+  .nav-link{
+    font-family: logoType;
+    color : black;
+    margin: 15px;
+  }
+
+  .like-count{
+    font-family: logoType;
+    margin: 15px;
+  }
+
+  .title3{
+    font-family: logoType;
+    font-size : 16pt;
+    text-align: center;
+    color : black;
+    margin-bottom: -0px;
+  }
+
+  .card-text {
+    font-size : 6pt;
+    text-align: center;
+    margin-top: 0px;
+    color : black;
+  }
+
+  .card{
+      width: 45%;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .title{
+    font-family: logoType;
+    font-size : 20pt;
+    color : black;
+    margin: 10px;
+  }
+
+  .navbar-toggler {
+    font-family: logoType;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0.80;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+  }
+
+  .nav-item{
+    font-family: logoType;
+    color : black;
+    margin-left: 15px;
+    font-size: 10px;
+    padding = 0;
+  }
+
+  .like-count{
+    font-family: logoType;
+  }
+
+  .title3{
+    font-family: logoType;
+    font-size : 16pt;
+    text-align: center;
+    color : black;
+    margin-bottom: -0px;
+  }
+
+  .caption {
+    font-size : 9pt;
+    text-align: center;
+    margin-top: 0px;
+    color : black;
+  }
+
+  .card{
+      width: 40%;
+  }
+
+  .image-container{
+    height: 250px; 
+    overflow: hidden;
+  } 
+
+  p {
+    margin: 0 auto;
+    font-family: iran;
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 18px;
+    padding: 30px;
+  }
+}
